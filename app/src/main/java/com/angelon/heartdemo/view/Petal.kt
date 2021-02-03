@@ -5,6 +5,7 @@ import android.graphics.Paint
 import android.graphics.Path
 import com.angelon.heartdemo.view.MyUtil.degrad
 
+@Suppress("ConvertSecondaryConstructorToPrimary")
 class Petal {
 
     //第一个控制点延长线倍数
