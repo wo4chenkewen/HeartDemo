@@ -6,7 +6,6 @@ package com.angelon.heartdemo.view
  */
 class Garden {
     class Options {
-
         companion object {
 
             //用于控制产生随机花瓣个数的范围
@@ -14,8 +13,8 @@ class Garden {
             const val maxPetalCount = 15
 
             //用于控制产生延长线倍数范围
-            const val minPetalStrech = 2.0
-            const val maxPetalStrech = 3.5
+            const val minPetalStretch = 2.0
+            const val maxPetalStretch = 3.5
 
             //用于控制产生随机增长因子的范围,增长因子决定花瓣绽放速度
             const val minGrowFactor = 1.0
@@ -37,7 +36,6 @@ class Garden {
             const val opacity = 50
 
         }
-
     }
 
     //创建一个随机的花朵
@@ -56,7 +54,7 @@ class Garden {
     }
 
     private fun createBloom(x: Int, y: Int, radius: Int, color: Int, petalCount: Int): Bloom {
-        return Bloom(Point(x, y), radius, color, petalCount,)
+        return Bloom(Point(x, y), radius, color, petalCount)
     }
 
 

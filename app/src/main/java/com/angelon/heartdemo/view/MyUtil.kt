@@ -9,7 +9,7 @@ import kotlin.math.roundToInt
 
 @Suppress("DEPRECATION")
 object MyUtil {
-    const val circle = 2 * Math.PI
+    private const val circle = 2 * Math.PI
     fun rgba(r: Int, g: Int, b: Int, a: Int): Int {
         return Color.argb(a, r, g, b)
     }
@@ -23,13 +23,13 @@ object MyUtil {
     }
 
     //产生随机的argb颜色
-    fun randomRgba(rmin: Int, rmax: Int, gmin: Int, gmax: Int, bmin: Int, bmax: Int, a: Int): Int {
-        val r = Math.round(random(rmin.toDouble(), rmax.toDouble())).toInt()
-        val g = Math.round(random(gmin.toDouble(), gmax.toDouble())).toInt()
-        val b = Math.round(random(bmin.toDouble(), bmax.toDouble())).toInt()
+    fun randomRgba(rMin: Int, rMax: Int, gMin: Int, gMax: Int, bMin: Int, bMax: Int, a: Int): Int {
+        val r = Math.round(random(rMin.toDouble(), rMax.toDouble())).toInt()
+        val g = Math.round(random(gMin.toDouble(), gMax.toDouble())).toInt()
+        val b = Math.round(random(bMin.toDouble(), bMax.toDouble())).toInt()
         val limit = 5
         return if (Math.abs(r - g) <= limit && Math.abs(g - b) <= limit && Math.abs(b - r) <= limit) {
-            rgba(rmin, rmax, gmin, gmax)
+            rgba(rMin, rMax, gMin, gMax)
         } else {
             rgba(r, g, b, a)
         }

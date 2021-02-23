@@ -44,7 +44,6 @@ class HeartView(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int
         garden = Garden()
         backgroundPaint = Paint()
         backgroundPaint.color = Color.rgb(0xff, 0xff, 0xe0)
-
     }
 
 
@@ -71,6 +70,7 @@ class HeartView(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int
             if (isDrawing) {
                 return@thread
             }
+
             isDrawing = true
             var angle = 10.0
 
@@ -151,8 +151,7 @@ class HeartView(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int
     private fun getHeartPoint(angle: Double): Point {
         val t = angle / Math.PI
         val x = heartRatio * (16 * Math.pow(Math.sin(t), 3.0))
-        val y =
-            -heartRatio * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t))
+        val y = -heartRatio * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t))
         return Point((offsetX + x).toInt(), (offsetY + y).toInt())
     }
 
